@@ -49,9 +49,6 @@ export default function Gallery() {
                   </button>
                 ))}
               </div>
-              <Link to="/add" className="btn-primary" style={{ padding: '0.4rem 0.875rem', fontSize: '0.8rem' }}>
-                + Add Work
-              </Link>
             </div>
           </div>
         </div>
@@ -97,7 +94,6 @@ export default function Gallery() {
             <p style={{ color: 'var(--text-muted)', fontFamily: '"JetBrains Mono", monospace', fontSize: '0.75rem' }}>
               No works in this category yet.
             </p>
-            <Link to="/add" className="btn-primary mt-6 inline-block">Add First Work</Link>
           </div>
         )}
       </div>

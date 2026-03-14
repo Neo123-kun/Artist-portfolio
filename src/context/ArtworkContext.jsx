@@ -96,29 +96,11 @@ const ArtworkContext = createContext();
 export function ArtworkProvider({ children }) {
   const [artworks, setArtworks] = useState(INITIAL_ARTWORKS);
 
-  const addArtwork = (artwork) => {
-    const newArtwork = {
-      ...artwork,
-      id: Date.now(),
-      featured: artwork.featured || false,
-    };
-    setArtworks(prev => [newArtwork, ...prev]);
-    return newArtwork;
-  };
-
-  const updateArtwork = (id, updates) => {
-    setArtworks(prev => prev.map(a => a.id === id ? { ...a, ...updates } : a));
-  };
-
-  const deleteArtwork = (id) => {
-    setArtworks(prev => prev.filter(a => a.id !== id));
-  };
-
   const categories = ['All', ...new Set(artworks.map(a => a.category))];
   const featured = artworks.filter(a => a.featured);
 
   return (
-    <ArtworkContext.Provider value={{ artworks, addArtwork, updateArtwork, deleteArtwork, categories, featured }}>
+    <ArtworkContext.Provider value={{ artworks, categories, featured }}>
       {children}
     </ArtworkContext.Provider>
   );
