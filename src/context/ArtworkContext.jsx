@@ -64,7 +64,7 @@ const INITIAL_ARTWORKS = [
     dimensions: 'None',
     category: 'Fan Art',
     description: 'Fan art of a character from Wuthering Waves.',
-    image: 'public/arts/Zani.jpg',
+    image: '/arts/Zani.jpg',
     featured: false,
   },
   {
@@ -75,7 +75,7 @@ const INITIAL_ARTWORKS = [
     dimensions: 'None',
     category: 'Fan Art',
     description: 'Fan art of the happy go lucky character from Blue Archive.',
-    image: 'public/arts/Asuna.jpg',
+    image: '/arts/Asuna.jpg',
     featured: true,
   },
 ];

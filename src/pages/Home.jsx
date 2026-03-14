@@ -184,7 +184,7 @@ export default function Home() {
           <div className="row align-items-center g-12">
             <div className="col-md-5">
               <img
-                src="public\arts\HinaVogue.jpg"
+                src="/arts/HinaVogue.jpg"
                 alt="Artist"
                 style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', border: '1px solid var(--border)' }}
               />
