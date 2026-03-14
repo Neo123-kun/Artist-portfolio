@@ -18,10 +18,11 @@ export default function ArtworkModal({ artwork, onClose }) {
         style={{
           background: 'var(--card-bg)',
           maxWidth: '900px',
-          width: '100%',
+          width: '90vw',
           maxHeight: '90vh',
           overflow: 'auto',
           animation: 'scaleIn 0.3s ease',
+          margin: 'auto',
         }}
       >
         <div className="row g-0">
@@ -72,12 +73,6 @@ export default function ArtworkModal({ artwork, onClose }) {
                   )
                 ))}
               </div>
-            </div>
-
-            <div className="mt-8">
-              <a href="/contact" className="btn-primary text-sm w-full text-center" style={{ display: 'block' }}>
-                Inquire About This Work
-              </a>
             </div>
           </div>
         </div>
