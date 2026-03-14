@@ -37,7 +37,7 @@ const INITIAL_ARTWORKS = [
   {
     id: 4,
     title: 'Belle',
-    year: '2023',
+    year: '2025',
     medium: 'FireAlpaca',
     dimensions: 'None',
     category: 'Fan Art',
@@ -48,7 +48,7 @@ const INITIAL_ARTWORKS = [
   {
     id: 5,
     title: 'Noa',
-    year: '2023',
+    year: '2025',
     medium: 'FireAlpaca and Ibis paint',
     dimensions: 'None',
     category: 'Fan Art',
@@ -76,18 +76,7 @@ const INITIAL_ARTWORKS = [
     category: 'Fan Art',
     description: 'Fan art of the happy go lucky character from Blue Archive.',
     image: 'dist/arts/Asuna.jpg',
-    featured: false,
-  },
-  {
-    id: 8,
-    title: 'Composition in Blue Minor',
-    year: '2022',
-    medium: 'Ink and gouache',
-    dimensions: '30 × 40 cm',
-    category: 'Drawing',
-    description: 'Inspired by musical scores — lines, rhythm, negative space. Visual music for the eye.',
-    image: 'https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800&q=80',
-    featured: false,
+    featured: true,
   },
 ];
 

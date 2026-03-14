@@ -1,11 +1,11 @@
 export default function About() {
   const exhibitions = [
-    { year: '2024', title: 'Threshold', venue: 'Galerie Fenna', city: 'Amsterdam' },
-    { year: '2024', title: 'New Dutch Painting', venue: 'Stedelijk Museum', city: 'Amsterdam' },
-    { year: '2023', title: 'Material Witness', venue: 'Kunsthalle', city: 'Rotterdam' },
-    { year: '2023', title: 'Soft Evidence', venue: 'The Approach', city: 'London' },
-    { year: '2022', title: 'Solo Debut', venue: 'GRIMM Gallery', city: 'New York' },
-    { year: '2021', title: 'Emerging Voices', venue: 'Van Abbemuseum', city: 'Eindhoven' },
+    { price: '$--', task: 'Headshot', venue: '--', city: 'Amsterdam' },
+    { price: '$--', task: 'Halfbody', venue: '--', city: 'Amsterdam' },
+    { price: '$--', task: 'Full body', venue: '--', city: 'Rotterdam' },
+    { price: '$--', task: '2 characters half body', venue: '--', city: 'London' },
+    { price: '$--', task: '--', venue: '--', city: 'New York' },
+    { price: '$--', task: '--', venue: '--', city: 'Eindhoven' },
   ];
 
   const press = [
@@ -41,9 +41,9 @@ export default function About() {
                 lineHeight: 1.6,
                 maxWidth: '160px',
               }}>
-                Amsterdam<br />
-                b. 1989<br />
-                Oil · Water · Mixed
+                Twitter<br />
+                2020<br />
+                Ibis Paint · FireAlpaca
               </div>
             </div>
           </div>
@@ -75,10 +75,10 @@ export default function About() {
               <div key={i} className="col-12" style={{ borderBottom: '1px solid var(--border)' }}>
                 <div className="row py-4 align-items-center">
                   <div className="col-2 col-md-1">
-                    <span style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: '0.7rem', color: 'var(--accent)' }}>{ex.year}</span>
+                    <span style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: '0.7rem', color: 'var(--accent)' }}>{ex.price}</span>
                   </div>
                   <div className="col-6 col-md-5">
-                    <span style={{ fontFamily: '"Playfair Display", serif', color: 'var(--text-primary)', fontSize: '0.95rem', fontStyle: 'italic' }}>{ex.title}</span>
+                    <span style={{ fontFamily: '"Playfair Display", serif', color: 'var(--text-primary)', fontSize: '0.95rem', fontStyle: 'italic' }}>{ex.task}</span>
                   </div>
                   <div className="col-4 col-md-3">
                     <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>{ex.venue}</span>
@@ -93,7 +93,7 @@ export default function About() {
         </div>
 
         {/* Press */}
-        <div>
+        {/* <div>
           <p className="section-label mb-8">Press</p>
           <div className="row g-5">
             {press.map((p, i) => (
@@ -109,7 +109,7 @@ export default function About() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
