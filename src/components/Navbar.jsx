@@ -110,7 +110,7 @@ export default function Navbar() {
             ['/gallery', 'Gallery'],
             ['/about', 'About'],
             ['/contact', 'Contact'],
-            ['/add', '+ Add Work'],
+            // ['/add', '+ Add Work'],
           ].map(([to, label]) => (
             <NavLink
               key={to}
