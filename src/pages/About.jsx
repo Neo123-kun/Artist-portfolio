@@ -23,7 +23,7 @@ export default function About() {
           <div className="col-md-5">
             <div style={{ position: 'relative' }}>
               <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=700&q=80"
+                src="dist\arts\Asuna.jpg"
                 alt="NeoArts"
                 style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', border: '1px solid var(--border)', display: 'block' }}
               />
@@ -55,10 +55,8 @@ export default function About() {
             </h1>
 
             {[
-              `Aria Voss (b. 1989, Amsterdam) is a Dutch visual artist whose practice centers on the overlooked poetry of everyday existence. Working primarily in oil, watercolor, and mixed media, her canvases traverse the borderlands between memory and presence, absence and material fact.`,
-              `Trained at the Gerrit Rietveld Academie (2008–2013) and the Rijksakademie van Beeldende Kunsten (2014–2015), Voss developed a rigorous attention to the physicality of paint — its weight, translucency, and capacity to hold time. Her paintings often begin as acts of sustained looking: a room at dawn, a body at rest, a view unchanged for thirty years.`,
-              `Her work has been exhibited internationally across Amsterdam, New York, London, and Berlin. She is the recipient of the Nederlandse Beeldende Kunst Award (2022) and a Mondrian Fund grant (2021). Her works are held in private and institutional collections throughout Europe.`,
-              `Voss lives and works in Amsterdam's Jordaan district, where her studio occupies a converted 17th-century canal house. She teaches intermittently at the Gerrit Rietveld Academie.`,
+              'A digital artist with a passion for drawing,',
+              'creating fan art of characters from games, anime, and the occacional own characters.',
             ].map((para, i) => (
               <p key={i} style={{ color: 'var(--text-secondary)', lineHeight: 1.9, fontSize: '0.95rem', marginBottom: '1.25rem' }}>
                 {para}
@@ -71,7 +69,7 @@ export default function About() {
 
         {/* Exhibitions */}
         <div className="mb-16">
-          <p className="section-label mb-8">Exhibition History</p>
+          <p className="section-label mb-8">Price List</p>
           <div className="row g-0">
             {exhibitions.map((ex, i) => (
               <div key={i} className="col-12" style={{ borderBottom: '1px solid var(--border)' }}>

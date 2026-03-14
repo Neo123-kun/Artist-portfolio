@@ -26,10 +26,9 @@ export default function Contact() {
 
             <div className="flex flex-col gap-5">
               {[
-                ['Studio', 'Jordaan, Amsterdam', null],
-                ['Email', 'aria@ariaVoss.art', 'mailto:aria@ariavoss.art'],
-                ['Instagram', '@aria.voss.art', 'https://instagram.com'],
-                ['Representation', 'Galerie Fenna, Amsterdam', null],
+                ['Name', 'Neoarts', null],
+                ['Alt Name', 'TSNeow', null],
+                ['Email', 'tsneow2@gmail.com', 'https://mail.google.com/mail/u/0/#inbox?compose=new'],
               ].map(([label, val, href]) => (
                 <div key={label}>
                   <p style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: '0.65rem', color: 'var(--accent)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 4 }}>
@@ -52,9 +51,9 @@ export default function Contact() {
               <div style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border)', padding: '3rem', textAlign: 'center' }}>
                 <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>✓</div>
                 <h2 style={{ fontFamily: '"Playfair Display", serif', color: 'var(--text-primary)', marginBottom: '1rem' }}>
-                  Message sent.
+                  This function does not work yet, contact me through your email instead!
                 </h2>
-                <p style={{ color: 'var(--text-secondary)' }}>Thank you — I'll be in touch within a few days.</p>
+                <p style={{ color: 'var(--text-secondary)' }}>I wont see the messages you will send through here</p>
                 <button onClick={() => setSent(false)} className="btn-outline mt-6" style={{ border: '1px solid var(--border)' }}>
                   Send another
                 </button>
@@ -164,7 +163,7 @@ export default function Contact() {
 
                 <div>
                   <button type="submit" className="btn-primary" style={{ padding: '0.75rem 2rem' }}>
-                    Send Message →
+                    This dosent work →
                   </button>
                 </div>
               </form>
