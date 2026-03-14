@@ -23,7 +23,7 @@ export default function About() {
           <div className="col-md-5">
             <div style={{ position: 'relative' }}>
               <img
-                src="dist\arts\Asuna.jpg"
+                src="/arts/Asuna.jpg"
                 alt="NeoArts"
                 style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', border: '1px solid var(--border)', display: 'block' }}
               />
