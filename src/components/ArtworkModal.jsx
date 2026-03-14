@@ -19,10 +19,11 @@ export default function ArtworkModal({ artwork, onClose }) {
           background: 'var(--card-bg)',
           maxWidth: '900px',
           width: '90vw',
-          maxHeight: '90vh',
+          maxHeight: 'calc(100vh - 4rem)',
           overflow: 'auto',
           animation: 'scaleIn 0.3s ease',
           margin: 'auto',
+          marginTop: '2rem',
         }}
       >
         <div className="row g-0">
