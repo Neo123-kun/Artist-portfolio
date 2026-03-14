@@ -4,7 +4,6 @@ export default function ArtworkModal({ artwork, onClose }) {
   useEffect(() => {
     const handler = (e) => { if (e.key === 'Escape') onClose(); };
     document.addEventListener('keydown', handler);
-    document.body.style.overflow = 'hidden';
     return () => {
       document.removeEventListener('keydown', handler);
       document.body.style.overflow = '';
@@ -19,11 +18,9 @@ export default function ArtworkModal({ artwork, onClose }) {
           background: 'var(--card-bg)',
           maxWidth: '900px',
           width: '90vw',
-          maxHeight: 'calc(100vh - 4rem)',
-          overflow: 'auto',
+          overflow: 'visible',
+          borderTop: '4px solid var(--accent)',
           animation: 'scaleIn 0.3s ease',
-          margin: 'auto',
-          marginTop: '2rem',
         }}
       >
         <div className="row g-0">
