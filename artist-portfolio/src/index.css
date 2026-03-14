@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #fdfaf5;
+    --bg-secondary: #f2e5c8;
+    --text-primary: #0e0c0a;
+    --text-secondary: #3d3a33;
+    --text-muted: #6b6456;
+    --border: #e0d5c0;
+    --accent: #2d74c4;
+    --card-bg: #ffffff;
+    --nav-bg: rgba(253,250,245,0.92);
+  }
+
+  .dark {
+    --bg: #0e0c0a;
+    --bg-secondary: #1a1814;
+    --text-primary: #f2e5c8;
+    --text-secondary: #c8bfaa;
+    --text-muted: #8a7f70;
+    --border: #2d2a24;
+    --accent: #2d74c4;
+    --card-bg: #1a1814;
+    --nav-bg: rgba(14,12,10,0.92);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: 'DM Sans', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+  }
+}
+
+@layer components {
+  .page-transition {
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  .artwork-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .artwork-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  }
+
+  .dark .artwork-card:hover {
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+
+  .btn-primary {
+    background-color: var(--accent);
+    color: white;
+    padding: 0.6rem 1.5rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .btn-primary:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+  }
+
+  .btn-outline {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 0.6rem 1.5rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 0;
+  }
+
+  .nav-link-custom {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease;
+    position: relative;
+  }
+
+  .nav-link-custom::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+  }
+
+  .nav-link-custom:hover,
+  .nav-link-custom.active {
+    color: var(--accent);
+  }
+
+  .nav-link-custom:hover::after,
+  .nav-link-custom.active::after {
+    width: 100%;
+  }
+
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.25s ease;
+    padding: 1rem;
+  }
+
+  .tag-pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    background: var(--bg-secondary);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+  }
+
+  .tag-pill.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+}
+
+/* Noise texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: scale(1); }
+}
