@@ -9,7 +9,7 @@ const INITIAL_ARTWORKS = [
     dimensions: 'None',
     category: 'Fan Art',
     description: 'Vogue style magazine cover of the character Hina from BlueArchive',
-    image: 'public/arts/HinaVogue.jpg',
+    image: '/arts/HinaVogue.jpg',
     featured: true,
   },
   {
@@ -20,7 +20,7 @@ const INITIAL_ARTWORKS = [
     dimensions: 'None',
     category: 'Fan Art',
     description: 'Manhattan Cafe a character from Umamusume',
-    image: 'public/arts/manhattanCafe.jpg',
+    image: '/arts/manhattanCafe.jpg',
     featured: true,
   },
   {
@@ -31,7 +31,7 @@ const INITIAL_ARTWORKS = [
     dimensions: 'None',
     category: 'OC Art',
     description: 'A custom character created by me. She is shown to have a thug like personality. Colorscheme used is black, yellow, and blue.',
-    image: 'public/arts/oc1.jpg',
+    image: '/arts/oc1.jpg',
     featured: false,
   },
   {
@@ -42,7 +42,7 @@ const INITIAL_ARTWORKS = [
     dimensions: 'None',
     category: 'Fan Art',
     description: 'Fan art of the character Belle from ZZZ.',
-    image: 'public/arts/Belle.jpg',
+    image: '/arts/Belle.jpg',
     featured: true,
   },
   {
@@ -53,7 +53,7 @@ const INITIAL_ARTWORKS = [
     dimensions: 'None',
     category: 'Fan Art',
     description: 'Fan art of Noa from Blue Archive.',
-    image: 'public/arts/Noa meme.jpg',
+    image: '/arts/Noa meme.jpg',
     featured: false,
   },
   {
