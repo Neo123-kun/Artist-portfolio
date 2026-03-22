@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
 const socialLinks = [
-  { name: "TwitterSFW / X", url: "https://twitter.com/youraccount" },
-  { name: "TwitterNSFW / X", url: "https://x.com/Neoarts121?t=3P2Qz417IOPL-stJCcUCSg&s=09" },
+  { name: "TwitterSFW / X", url: "https://x.com/TheSafeNeow" },
+  { name: "TwitterNSFW / X", url: "https://x.com/Neoarts121" },
   { name: "Pixiv", url: "https://www.pixiv.net/en/users/46924840" },
   { name: "Instagram", url: "https://instagram.com/youraccount" }
 ];
